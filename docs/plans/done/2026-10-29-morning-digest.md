@@ -1,6 +1,6 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
 ---
@@ -77,3 +77,19 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Digest types: DigestRow and readNight signature | — | claude-code · opus-5.5 · low | 2026-11-01 |
+| 2 | Run log reader: readNight | #1 | claude-code · opus-5.5 · medium | 2026-11-01 |
+| 3 | Digest page: GET /digest/:night | #1 | claude-code · sonnet-5.5 · medium | 2026-11-01 |
+| 4 | Digest JSON: GET /api/digest/:night | #1 | claude-code · sonnet-5.5 · medium | 2026-11-01 |
+| 5 | Board link: each night links to its digest with counts | #1 | claude-code · sonnet-5.5 · medium | 2026-11-01 |
+| 6 | Route tests for digest page and JSON | #1 | claude-code · sonnet-5.5 · medium | 2026-11-01 |
+| 7 | Preview for review: /digest/2026-10-28 on a public link | #3, #4, #5, #6 | claude-code · opus-5.5 · low | 2026-11-02 |
+| 8 | Clean up: take the lane marker off the preview, close the plan | #7, review in | claude-code · opus-5.5 · low | 2026-11-16 |
+
+The preview link (https://olafkrawczyk.github.io/rig-handover/) was re-saved with `LANE_MARKER`
+unset on 2026-11-16 and shows "no marker set". The marker secret was deleted.
